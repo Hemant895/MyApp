@@ -1,0 +1,66 @@
+<div>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <div class="container-fluid">
+      <div class="col-sm-5">
+        <label  class="form-label">First Name</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          placeholder="First Name"
+          aria-label="Name"
+          [(ngModel)]="person.first_name"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <div class="container-fluid">
+      <div class="col-sm-5">
+        <label  class="form-label">Last Name</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          placeholder="last Name"
+          aria-label="Name"
+          [(ngModel)]="person.last_name"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <div class="container-fluid">
+      <div class="col-sm-5">
+        <label  class="form-label">Email</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          placeholder="email"
+          aria-label="Name"
+          [(ngModel)]="person.email"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="shadow p-3 mb-5 bg-body rounded" style="text-align: center">
+    <button class="btn btn-primary btn-lg" (click)="addPerson()">
+      Add Data
+    </button>
+  </div>
+</div>
+<!-- <table class='table'>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people;">
+      <td>{{person.id}}</td>
+      <td>{{person.name}}</td>
+    </tr>
+  </tbody>
+</table> -->

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+<table  class="table table-striped table-bordered table-sm row-border hover"
+ datatable [dtOptions]="dtOptions">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let group of data">
+            <td contenteditable="true">{{group.Name}}</td>
+            <td contenteditable="true">{{group.email}}</td>
+            <td contenteditable="true">{{group.phone}}</td>
+            <td contenteditable="true">{{group.company}}</td>
+        </tr>
+    </tbody>
+</table> 
+</div>    
+<!-- <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr>
+            <th class="text-center">number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pt-3-half" contenteditable="true"><input type="text" name="add1" value=0 class="border-none"></td>
+          </tr>
+        </tbody>
+      </table> -->

@@ -1,0 +1,48 @@
+<div class="shadow p-3 mb-5 bg-body rounded">
+  <h1 class="d-inline-flex p-2 bd-highlight">Using JSON-server in Angular</h1>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <ul class="row align-items-start">
+      <li class="col"  *ngFor="let Data of data">
+        {{ Data.id }}
+      </li>
+    </ul>
+  </div>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <ul class="row align-items-start">
+      <li class="col" *ngFor="let Data of data" contenteditable>
+        {{ Data.first_name}}-{{ Data.last_name }}
+      </li>
+    </ul>
+  </div>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <ul class="row align-items-start">
+      <li class="col" *ngFor="let Data of data">{{ Data.email}}</li>
+    </ul>
+  </div>
+  <div  style="text-align: center">
+    <button class="btn btn-primary btn-lg" (click)="getData()">Fetch Data</button>
+  </div>
+</div>
+<div class="shadow p-3 mb-5 bg-body rounded">
+  <h1 class="d-inline-flex p-2 bd-highlight">Using JSON in Angular</h1>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <ul class="row align-items-start">
+      <li class="col" *ngFor="let product of products">
+        {{ product.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <ul class="row align-items-start">
+      <li class="col" *ngFor="let product of products">
+        {{ product.description }}
+      </li>
+    </ul>
+  </div>
+  <div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <ul class="row align-items-start">
+      <li class="col" *ngFor="let product of products">{{ product.salary }}</li>
+    </ul>
+  </div>
+</div>
+

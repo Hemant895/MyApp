@@ -1,0 +1,31 @@
+<!--dash.component.html-->
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+    <mat-grid-tile *ngFor="let i of [1]" [colspan]="( cardLayout | async )?.table.cols"
+      [rowspan]="( cardLayout | async )?.table.rows">
+      <app-card title="Card {{i}}">
+        <div>
+          <chart class="dashchart" [type]="type" [data]="data" [options]="options"></chart>
+        </div></app-card>
+    </mat-grid-tile>
+    <!--Charts-->
+    <mat-grid-tile *ngFor="let i of [2]" [colspan]="( cardLayout | async )?.chart.cols"
+      [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Card {{i}}">
+        <div>
+          <chart class="dashchart" [type]="Secondtype" [data]="Seconddata" [options]="Doptions"></chart>
+        </div>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Card 3">
+        <div>
+          <chart class="dashchart" [type]="thirdtype" [data]="thirddata" [options]="poptions"></chart>
+        </div>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+ </div>
+
+
